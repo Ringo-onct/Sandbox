@@ -1,7 +1,5 @@
 .PHONY: build
-start:
-	find ./ -maxdepth 1 -type f -exec chmod 766 {} +
-	./build
+start: build up bash
 
 build:
 	docker-compose build do --build-arg USERNAME=$(USER)
