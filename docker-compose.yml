@@ -1,0 +1,9 @@
+services:
+  do:
+    build: .
+    working_dir: /app
+    volumes:
+      - ./do:/app
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    tty: true
